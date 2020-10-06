@@ -1,0 +1,33 @@
+<!--Created by Shelley Ophir
+Coding Dojo Oct. 2, 2020
+Create a template using Flask and inline CSS-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground Level 2</title>
+
+</head>
+
+<body>
+
+    <!--When a user visits localhost:5000/play/(x), have it display the beautiful looking blue boxes x times. For example, localhost:5000/play/7 should display these blue boxes 7 times. Calling localhost:5000/play/35 would display these blue boxes 35 times. Please remember that x originally is a string, and if you want to use it as an integer, you must first convert it to integer using int(). For example int("7") returns 7.-->
+    <div style="text-align: center; margin: 75px;">
+        <h1>Welcome!</h1>
+        <div>
+            {%for i in range (0, times, 1):%}
+
+                <div
+                    style="background-color: #9fc5f8; height: 150px; width: 150px; border: 2px solid black; display: inline-block; margin: 10px;">
+                </div>
+
+            {%endfor%}
+
+        </div>
+
+</body>
+
+</html>
